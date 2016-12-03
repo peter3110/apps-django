@@ -1,0 +1,7 @@
+{{welcome_str}}
+<h1>Datos del Usuario</h1>
+<form method="post" action="/encuestas/preguntas/">
+	{% csrf_token %}
+    {{ form }}
+    <input type="submit" name="submit" value="Create User Data" />
+</form>

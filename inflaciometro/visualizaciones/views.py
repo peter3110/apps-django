@@ -9,8 +9,11 @@ def data(request):
     data_inflacion = inflacionThomsonReuters.objects.all()
     inflaciones = '[' + ', '.join('(' + str(i.porcentaje) + ', ' + str(i.fecha) + ')' for i in data_inflacion) + ']'
     ciudades = ', '.join([u.ciudad for u in data_usuarios])
-    return HttpResponse(
-        "Ciudades de los usuarios en la bdd: " + ciudades + ". Porcentajes de inflacion: " + inflaciones)
+    context = {
+        'ciudades': ciudades,
+        'inflaciones': inflaciones
+    }
+    return render(request, 'visualizaciones/data.html', context)
 
 def index(request): 
     context = {
@@ -48,4 +51,3 @@ def charts(request):
 
 
 
-    
