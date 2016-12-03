@@ -12,3 +12,18 @@ class inflacionThomsonReuters(models.Model):
 	categoria = models.CharField(max_length=200, default='?')
 	porcentaje = models.FloatField(default=0)
 	fecha = models.DateField(default=date.today)
+
+	def __str__(self):
+		return 'Categoria: ' + self.categoria + ' ' + 'Porcentaje: ' + str(self.porcentaje) + ' ' + 'Fecha: ' + str(self.fecha)
+
+class datosUsuarioAnonimo(models.Model):
+	ciudad = models.CharField(max_length=50, default='?')
+	edad = models.IntegerField(default=0)
+	expectativaDeInflacion = models.FloatField(default=0)
+	gastoTransporte = models.IntegerField(default=0)
+	gastoEducacion = models.IntegerField(default=0)
+	gastoVivienda = models.IntegerField(default=0)
+	gastoSalud = models.IntegerField(default=0)
+
+	def __str__(self):
+		return 'Ciudad: ' + str(self.ciudad) + ' ' + 'Edad: ' + str(self.edad)

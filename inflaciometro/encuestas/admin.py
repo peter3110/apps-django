@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import inflacionThomsonReuters, datosUsuarioAnonimo
+
+admin.site.register(inflacionThomsonReuters)
+admin.site.register(datosUsuarioAnonimo)
