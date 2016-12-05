@@ -1,3 +1,22 @@
-{{form.ciudad}}
-{{form.edad}}
-{{form.gastoTransporte}}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bokeh Scatter Plots</title>
+   <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.css" rel="stylesheet" type="text/css">
+   <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+ 	<div>
+		{{title}}
+		{{data.ciudad}}
+		{{data.edad}}
+    <a href="{% url 'index' %}">Index</a>
+	</div>
+    {{ div |safe }}
+	</body>
+
+    <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.js"></script>
+	<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.js"></script>
+    {{script |safe}}
+</html>

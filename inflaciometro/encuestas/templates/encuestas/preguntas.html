@@ -2,6 +2,6 @@
 <h1>Datos del Usuario</h1>
 <form method="post" action="/encuestas/preguntas/">
 	{% csrf_token %}
-    {{ form }}
+	{{ form.as_ul }}
     <input type="submit" name="submit" value="Create User Data" />
 </form>
