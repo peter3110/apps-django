@@ -34,6 +34,8 @@ INSTALLED_APPS = [
     'inflaciometro',
     'encuestas',
     'visualizaciones',
+    'html5',
+    'floppyforms',
 
     'django.contrib.admin',
     'django.contrib.auth',
