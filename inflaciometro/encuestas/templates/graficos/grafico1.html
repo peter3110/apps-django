@@ -2,21 +2,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Bokeh Scatter Plots</title>
-   <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.css" rel="stylesheet" type="text/css">
-   <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet" type="text/css">
+   <meta charset="utf-8">
+  <title>DAP Graph Plotter</title>
+  <link href="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.css" rel="stylesheet" type="text/css">
+  <link href="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css">
  </head>
+
  <body>
- 	<div>
-		{{title}}
-		{{data.ciudad}}
-		{{data.edad}}
+  <div>
+    {{title}}
+    {{data.ciudad}}
+    {{data.edad}}
     <a href="{% url 'index' %}">Index</a>
-	</div>
-    {{ div |safe }}
-	</body>
+  </div>
+  
+ 	<div>
+    {{ div | safe }}
+  </div>
 
     <script src="http://cdn.pydata.org/bokeh/release/bokeh-0.12.0.min.js"></script>
-	<script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.js"></script>
-    {{script |safe}}
+	  <script src="http://cdn.pydata.org/bokeh/release/bokeh-widgets-0.12.0.min.js"></script>
+    {{ script | safe }}
+  </body>
 </html>

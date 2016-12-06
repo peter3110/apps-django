@@ -17,9 +17,14 @@ class inflacionThomsonReuters(models.Model):
 		return 'Categoria: ' + self.categoria + ' ' + 'Porcentaje: ' + str(self.porcentaje) + ' ' + 'Fecha: ' + str(self.fecha)
 
 class datosUsuarioAnonimo(models.Model):
+	# Datos personales
 	ciudad = models.CharField(max_length=50, default='?')
 	edad = models.IntegerField(default=0)
+
+	# Expectativas personales
 	expectativaDeInflacion = models.FloatField(default=0)
+
+	# Datos sobre gastos
 	gastoTransporte = models.IntegerField(default=0)
 	gastoEducacion = models.IntegerField(default=0)
 	gastoVivienda = models.IntegerField(default=0)
